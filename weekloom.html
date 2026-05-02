@@ -131,6 +131,40 @@
     }
     .btn-secondary:hover { background: rgba(255,255,255,0.12); }
 
+    /* ── SCREENSHOTS ── */
+    .screenshots {
+      margin: 0 auto 80px;
+      padding: 0 24px;
+      overflow: hidden;
+    }
+    .screenshots h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .screenshots h2 span { color: var(--purple); }
+    .screenshots-row {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding-bottom: 12px;
+      width: fit-content;
+      margin: 0 auto;
+      max-width: 100%;
+      scrollbar-width: thin;
+      scrollbar-color: var(--purple) transparent;
+    }
+    .screenshots-row img {
+      height: 460px;
+      border-radius: 20px;
+      flex-shrink: 0;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    }
+
     /* ── FEATURES ── */
     .features {
       max-width: 1000px;
@@ -230,6 +264,18 @@
         Get it on Google Play
       </a>
       <a class="btn-secondary" href="privacy-weekloom.html">Privacy Policy</a>
+    </div>
+  </section>
+
+  <!-- SCREENSHOTS -->
+  <section class="screenshots" id="screenshots">
+    <h2>See it in <span>action</span></h2>
+    <div class="screenshots-row">
+      <img src="images/weekloom/splash.jpg" alt="Splash" />
+      <img src="images/weekloom/net.jpg" alt="Life grid" />
+      <img src="images/weekloom/year.jpg" alt="Year view" />
+      <img src="images/weekloom/memory.jpg" alt="Memories" />
+      <img src="images/weekloom/insides.jpg" alt="Insights" />
     </div>
   </section>
 
