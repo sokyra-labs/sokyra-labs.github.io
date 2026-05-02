@@ -132,7 +132,6 @@
 
     /* ── SCREENSHOTS ── */
     .screenshots {
-      max-width: 1000px;
       margin: 0 auto 80px;
       padding: 0 24px;
       overflow: hidden;
@@ -142,6 +141,9 @@
       font-size: 1.8rem;
       font-weight: 800;
       margin-bottom: 40px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .screenshots h2 span { color: var(--gold); }
     .screenshots-row {
@@ -149,7 +151,9 @@
       gap: 16px;
       overflow-x: auto;
       padding-bottom: 12px;
-      justify-content: center;
+      width: fit-content;
+      margin: 0 auto;
+      max-width: 100%;
       scrollbar-width: thin;
       scrollbar-color: var(--gold) transparent;
     }
