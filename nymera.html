@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nymera — Lucid Dreaming Guide</title>
+  <link rel="icon" href="images/nymera-icon.png" type="image/png" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg:       #07091C;
+      --card:     #0D0F26;
+      --primary:  #6E92F5;
+      --purple:   #8B52DC;
+      --teal:     #00D4C8;
+      --text:     #E4E2F8;
+      --muted:    #8A88B4;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: rgba(7, 9, 28, 0.92);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 5px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(110, 146, 245, 0.10);
+    }
+    .header-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .header-logo img { height: 65px; filter: brightness(0) invert(1); }
+    header nav a {
+      color: var(--muted);
+      text-decoration: none;
+      margin-left: 24px;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+    header nav a:hover { color: var(--primary); }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 100px 24px 80px;
+      text-align: center;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(110, 146, 245, 0.18) 0%, rgba(139, 82, 220, 0.10) 55%, transparent 80%);
+      pointer-events: none;
+    }
+    .hero .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(110, 146, 245, 0.10);
+      border: 1px solid rgba(110, 146, 245, 0.35);
+      color: #A0B8FF;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.1;
+      max-width: 680px;
+      margin: 0 auto 20px;
+    }
+    .hero h1 .highlight {
+      background: linear-gradient(90deg, var(--primary), var(--purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 480px;
+      margin: 0 auto 40px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--primary), var(--purple));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+    .btn-primary.disabled {
+      background: #2A2C48;
+      color: var(--muted);
+      pointer-events: none;
+      cursor: default;
+    }
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.10);
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 14px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,0.10); }
+
+    /* ── FEATURES ── */
+    .features {
+      max-width: 1000px;
+      margin: 20px auto 80px;
+      padding: 0 24px;
+    }
+    .features h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 48px;
+    }
+    .features h2 span { color: var(--primary); }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+    .feature-card {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 28px 24px;
+      border: 1px solid rgba(110, 146, 245, 0.08);
+    }
+    .feature-card .icon { font-size: 2rem; margin-bottom: 14px; }
+    .feature-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: 8px; }
+    .feature-card p { font-size: 0.88rem; color: var(--muted); }
+
+    /* ── SCREENSHOTS ── */
+    .screenshots { padding: 20px 0 80px; overflow: hidden; }
+    .screenshots h2 {
+      text-align: center;
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 40px;
+      padding: 0 24px;
+    }
+    .screenshots h2 span { color: var(--primary); }
+    .screens-scroll {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 10px 40px 20px;
+      width: fit-content;
+      margin: 0 auto;
+      max-width: 100%;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(110, 146, 245, 0.15) transparent;
+      -webkit-overflow-scrolling: touch;
+    }
+    .screens-scroll::-webkit-scrollbar { height: 4px; }
+    .screens-scroll::-webkit-scrollbar-thumb { background: rgba(110, 146, 245, 0.15); border-radius: 2px; }
+    .screen-item { flex-shrink: 0; width: 220px; }
+    .screen-item img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.55);
+      display: block;
+    }
+
+    /* ── CTA ── */
+    .cta {
+      text-align: center;
+      padding: 80px 24px;
+      background: linear-gradient(135deg, rgba(110, 146, 245, 0.10) 0%, rgba(139, 82, 220, 0.08) 100%);
+      border-top: 1px solid rgba(110, 146, 245, 0.08);
+    }
+    .cta h2 { font-size: 2rem; font-weight: 800; margin-bottom: 14px; }
+    .cta p { color: var(--muted); margin-bottom: 36px; }
+    .cta .coming-note {
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #040511;
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(110, 146, 245, 0.06);
+    }
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 14px;
+    }
+    footer a { color: var(--primary); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      header { padding: 5px 20px; justify-content: center; }
+      .header-logo img { height: 70px; }
+      header nav { display: none; }
+      .hero { padding: 70px 20px 60px; }
+      .screen-item { width: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="header-logo">
+      <img src="images/sokyra-logo.png" alt="Sokyra Labs" />
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#screenshots">Screenshots</a>
+      <a href="privacy-nymera.html">Privacy</a>
+      <a href="index.html">All Apps</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="badge">🌙 Lucid Dreaming Guide</div>
+    <h1>Dream lucidly,<br><span class="highlight">train your mind</span></h1>
+    <p class="subtitle">Train reality checks, master 6 proven techniques, and journal every dream — your complete lucid dreaming toolkit in one focused app.</p>
+    <div class="hero-actions">
+      <a class="btn-primary disabled" href="#">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.97 1.45-.5l14 8.5a.5.5 0 010 .99l-14 8.5C3.97 21.47 3 21.33 3 20.5z"/></svg>
+        Coming Soon on Google Play
+      </a>
+      <a class="btn-secondary" href="#screenshots">See screenshots</a>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Everything you need to <span>dream lucidly</span></h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">🔔</div>
+        <h3>Reality Checks</h3>
+        <p>Schedule reality check reminders throughout the day. Build the habit that triggers lucidity during dreams.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🧠</div>
+        <h3>6 Proven Techniques</h3>
+        <p>Step-by-step guides for WILD, MILD, FILD, SSILD, WBTB, and Anchoring — each explained with instructions.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📖</div>
+        <h3>Dream Journal</h3>
+        <p>Record dreams with titles, descriptions, emotion tags, clarity ratings, and dream signs. All stored locally.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">⏰</div>
+        <h3>WBTB Alarm</h3>
+        <p>Built-in Wake Back To Bed alarm system. Set your wake time and fall back asleep with technique guidance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">😴</div>
+        <h3>Sleep Tracking</h3>
+        <p>Log your sleep quality and duration alongside your dreams. Spot patterns that lead to more vivid dreams.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔒</div>
+        <h3>No Account Needed</h3>
+        <p>All data stays on your device. Your dreams are private by default — no cloud, no sign-up required.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="screenshots" id="screenshots">
+    <h2>See it in <span>action</span></h2>
+    <div class="screens-scroll">
+      <div class="screen-item"><img src="images/nymera/screen1.png" alt="Training screen" /></div>
+      <div class="screen-item"><img src="images/nymera/screen2.png" alt="Sleep tracking" /></div>
+      <div class="screen-item"><img src="images/nymera/screen3.png" alt="Techniques" /></div>
+      <div class="screen-item"><img src="images/nymera/screen4.png" alt="Dream journal" /></div>
+      <div class="screen-item"><img src="images/nymera/screen5.png" alt="New dream entry" /></div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Start your lucid journey</h2>
+    <p>Free to download. Premium unlocks all techniques and removes ads.</p>
+    <a class="btn-primary disabled" href="#">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M3 20.5v-17c0-.83 1-.97 1.45-.5l14 8.5a.5.5 0 010 .99l-14 8.5C3.97 21.47 3 21.33 3 20.5z"/></svg>
+      Coming Soon on Google Play
+    </a>
+    <p class="coming-note">Currently in closed beta testing</p>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">Sokyra Labs</a>
+      <a href="ignis.html">Ignis</a>
+      <a href="privacy-nymera.html">Privacy Policy</a>
+      <a href="mailto:sokyralabs@gmail.com">Contact</a>
+    </div>
+    <div>© 2025 Sokyra Labs. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
