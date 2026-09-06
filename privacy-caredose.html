@@ -1,117 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — CareDose</title>
-  <link rel="icon" href="images/favicon.png" type="image/png" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --cream: #F5F0E4;
-      --navy:  #1B2A55;
-      --gold:  #C9A84C;
-      --muted: #5A6480;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--cream);
-      color: var(--navy);
-      line-height: 1.7;
-    }
-    header {
-      background: var(--navy);
-      padding: 5px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; }
-    header a:hover { color: var(--gold); }
-    header img.logo { height: 65px; filter: brightness(0) invert(1); }
-    @media (max-width: 600px) {
-      header { padding: 5px 20px; justify-content: center; }
-      header img.logo { height: 70px; }
-      header .back { display: none; }
-    }
-    .content {
-      max-width: 720px;
-      margin: 60px auto;
-      padding: 0 24px 80px;
-    }
-    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
-    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 40px; }
-    h2 { font-size: 1.15rem; font-weight: 700; margin: 36px 0 12px; color: var(--navy); }
-    p { color: var(--muted); margin-bottom: 12px; }
-    ul { color: var(--muted); padding-left: 22px; margin-bottom: 12px; }
-    ul li { margin-bottom: 6px; }
-    a { color: var(--gold); }
-    footer {
-      background: #12203F;
-      color: rgba(255,255,255,0.5);
-      text-align: center;
-      padding: 24px;
-      font-size: 0.85rem;
-    }
-    footer a { color: var(--gold); text-decoration: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Privacy Policy — CareDose — Sokyra Labs</title>
+<link rel="icon" href="images/caredose-icon.jpg" type="image/jpeg" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/sokyra.css">
 </head>
-<body>
+<body class="locked">
+<div id="pre"><div class="pre-in"><img class="pre-mark" src="images/sokyra-mark.png" alt="Sokyra Labs"><div class="pre-word">Sokyra&nbsp;Labs</div><div class="pre-num">000 %</div><div class="pre-bar"><i></i></div></div></div>
+<div class="mesh"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="vignette"></div>
+<div class="grain"></div>
+<div class="wipe"></div>
+<div class="cur"></div><div class="cur-r"></div>
+<div id="prog"></div>
 
-  <header>
-    <a href="index.html"><img class="logo" src="images/sokyra-logo.png" alt="Sokyra Labs" /></a>
-    <a class="back" href="index.html">← Back to home</a>
-  </header>
+<nav class="nav">
+<a class="brand mag" href="index.html"><img src="images/sokyra-mark.png" alt=""><span>Sokyra&nbsp;Labs</span></a>
+<div class="nav-r">
+<div class="lang-switch" role="group" aria-label="Language">
+ <button type="button" data-lang="en">EN</button>
+ <button type="button" data-lang="ru">RU</button>
+ <button type="button" data-lang="ua">UA</button>
+</div>
+<a class="pill mag" href="caredose.html"><span aria-hidden="true">←</span> <span data-i18n="privacy.back_to">Back to</span> CareDose</a>
+</div>
+</nav>
 
-  <div class="content">
-    <h1>Privacy Policy — CareDose</h1>
-    <div class="updated">Last updated: May 5, 2025</div>
+<main id="view">
 
-    <p>CareDose ("we", "our", or "the app") is a medication reminder and tracking application developed by Sokyra Labs. This Privacy Policy explains what data we collect, how we use it, and your rights.</p>
+<section class="phero" style="--c:#ffc53d" data-screen-label="Privacy hero">
+ <div class="phero-glow"></div>
+ <a class="pill mag rv" style="align-self:flex-start;margin-bottom:26px" href="caredose.html"><span aria-hidden="true">←</span> <span data-i18n="privacy.back_to">Back to</span> CareDose</a>
+ <div class="phero-app rv"><img src="images/caredose-icon.jpg" alt=""><div><b>CareDose</b><span data-i18n="privacy.caredose.subtitle">Medication tracker</span></div></div>
+ <h1 class="phero-title rv" data-i18n="privacy.title">Privacy Policy</h1>
+ <div class="stamp rv"><i></i><span data-i18n="privacy.last_updated">Last updated:</span> September 6, 2026</div>
+ <p class="lede rv" data-i18n="privacy.caredose.lede">CareDose ("we", "our", or "the app") is a medication reminder and tracking application developed by Sokyra Labs. This Privacy Policy explains what data we collect, how we use it, and your rights.</p>
+</section>
 
-    <h2>1. Data We Collect</h2>
-    <p>CareDose stores all your data <strong>locally on your device</strong>. We do not collect, transmit, or store any personal or health data on external servers.</p>
-    <p>The following data is stored locally on your device only:</p>
-    <ul>
-      <li><strong>Medication data</strong> — medication names, dosages, schedules, and intake history you enter.</li>
-      <li><strong>Profile data</strong> — profile names and colors you create within the app.</li>
-      <li><strong>App settings</strong> — notification preferences and display settings.</li>
+<section class="glance" style="--c:#ffc53d">
+ <div class="glance-grid">
+  <div class="gl rv"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M9 18h6"/></svg><h3 data-i18n="privacy.caredose.glance1_title">On-device by default</h3><p data-i18n="privacy.caredose.glance1_desc">Medications, profiles and dose history are stored locally — not on our servers.</p></div>
+  <div class="gl rv"><svg viewBox="0 0 24 24"><path d="M4 15l4-11 4 8 4-8 4 11"/></svg><h3 data-i18n="privacy.caredose.glance2_title">AI-assisted scanning</h3><p data-i18n="privacy.caredose.glance2_desc">A package photo is relayed through our server to Google Gemini to read it — the photo is never stored afterward.</p></div>
+  <div class="gl rv"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg><h3 data-i18n="privacy.caredose.glance3_title">Interaction checks via RxNav</h3><p data-i18n="privacy.caredose.glance3_desc">Only medication names are sent to the U.S. National Library of Medicine's public lookup service — no identifiers attached.</p></div>
+  <div class="gl rv"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2"/><path d="M6 7l1 13a2 2 0 002 2h6a2 2 0 002-2l1-13"/></svg><h3 data-i18n="privacy.caredose.glance4_title">Delete anytime</h3><p data-i18n="privacy.caredose.glance4_desc">Uninstalling removes everything — there's nothing left on our side to ask us to delete.</p></div>
+ </div>
+</section>
+
+<section class="legal" style="--c:#ffc53d">
+ <div class="legal-wrap">
+  <nav class="toc" aria-label="Sections">
+   <span data-i18n="privacy.toc_label">On this page</span>
+   <ol>
+    <li><a href="#s01"><b>01</b> <span data-i18n="privacy.sec.data_we_collect">Data We Collect</span></a></li>
+    <li><a href="#s02"><b>02</b> <span data-i18n="privacy.sec.how_we_use">How We Use Data</span></a></li>
+    <li><a href="#s03"><b>03</b> <span data-i18n="privacy.sec.data_sharing">Data Sharing</span></a></li>
+    <li><a href="#s04"><b>04</b> <span data-i18n="privacy.sec.data_storage">Data Storage and Security</span></a></li>
+    <li><a href="#s05"><b>05</b> <span data-i18n="privacy.caredose.sec_camera_photo">Camera &amp; Photo Library Permission</span></a></li>
+    <li><a href="#s06"><b>06</b> <span data-i18n="privacy.caredose.sec_notifications">Notifications Permission</span></a></li>
+    <li><a href="#s07"><b>07</b> <span data-i18n="privacy.sec.childrens_privacy">Children's Privacy</span></a></li>
+    <li><a href="#s08"><b>08</b> <span data-i18n="privacy.sec.your_rights">Your Rights</span></a></li>
+    <li><a href="#s09"><b>09</b> <span data-i18n="privacy.sec.changes">Changes to This Policy</span></a></li>
+    <li><a href="#s10"><b>10</b> <span data-i18n="privacy.sec.contact">Contact</span></a></li>
+   </ol>
+  </nav>
+
+  <div>
+   <section class="sec" id="s01">
+    <div class="sec-n">01</div>
+    <h2 data-i18n="privacy.sec.data_we_collect">Data We Collect</h2>
+    <p>Your medication data stays <strong>locally on your device</strong>. We do not collect or store your medication history, doses, or profiles on our servers. The following information may be processed:</p>
+    <dl class="deflist">
+     <dt>Medication data</dt>
+     <dd>Medication names, dosages, schedules, and intake history you enter. Stored locally only.</dd>
+     <dt>Profile data</dt>
+     <dd>Profile names and colors you create within the app. Stored locally only.</dd>
+     <dt>App settings</dt>
+     <dd>Notification preferences and display settings. Stored locally only.</dd>
+     <dt>Package scan photos</dt>
+     <dd>If you use the "Scan package" feature, the photo you take is sent to our server (a Cloudflare Worker), which forwards it to Google's Gemini API to read the medication name, dosage, and pill count. The photo is not stored by us — it is used only to generate the result, which is returned to your device.</dd>
+     <dt>Medication names for interaction checks</dt>
+     <dd>If you have two or more active medications, their names are sent to RxNav, a public drug-interaction lookup service operated by the U.S. National Library of Medicine (NIH), to check for known interactions. No other personal data is included in this request.</dd>
+     <dt>Advertising data</dt>
+     <dd>The app uses Google AdMob to display banner, interstitial, and rewarded ads. AdMob may collect device identifiers and usage data for ad personalization. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</dd>
+    </dl>
+   </section>
+
+   <section class="sec" id="s02">
+    <div class="sec-n">02</div>
+    <h2 data-i18n="privacy.sec.how_we_use">How We Use Data</h2>
+    <ul class="tick">
+     <li>To display your medication schedules and send local reminder notifications</li>
+     <li>To track dose history and calculate adherence statistics</li>
+     <li>To read medication details from a package photo via Google Gemini, when you use the scan feature</li>
+     <li>To check for interactions between your active medications via RxNav</li>
+     <li>To generate PDF and CSV reports that you can share from your device</li>
+     <li>To display advertisements via Google AdMob</li>
     </ul>
+   </section>
 
-    <h2>2. How We Use Data</h2>
-    <ul>
-      <li>To display your medication schedules and send local reminder notifications</li>
-      <li>To track dose history and calculate adherence statistics</li>
-      <li>To generate PDF and CSV reports that you can share from your device</li>
+   <section class="sec" id="s03">
+    <div class="sec-n">03</div>
+    <h2 data-i18n="privacy.sec.data_sharing">Data Sharing</h2>
+    <p>We do not sell, trade, or share your personal data with third parties, except:</p>
+    <ul class="tick">
+     <li><strong>Google Gemini API</strong> — package photos are relayed through our own server to Gemini for medication recognition. Photos are not stored on our server or by us afterward.</li>
+     <li><strong>RxNav (U.S. National Library of Medicine)</strong> — medication names only, to check for drug interactions. No account or device identifier is included.</li>
+     <li><strong>Google AdMob</strong> — advertising identifiers for ad delivery.</li>
     </ul>
+    <p class="note">When you choose to export a report (PDF or CSV), the file is created locally on your device and shared only through the standard system share dialog — entirely under your control.</p>
+   </section>
 
-    <h2>3. Data Sharing</h2>
-    <p>CareDose does not share any data with third parties. The app has no internet connection, no analytics, and no advertising. All data remains exclusively on your device.</p>
-    <p>When you choose to export a report (PDF or CSV), the file is created locally on your device and shared only through the standard system share dialog — entirely under your control.</p>
+   <section class="sec" id="s04">
+    <div class="sec-n">04</div>
+    <h2 data-i18n="privacy.sec.data_storage">Data Storage and Security</h2>
+    <p>All medication, profile, and settings data is stored on your device using the standard Android local storage (SharedPreferences). You can delete all app data at any time by clearing app data or uninstalling the app from your device settings. Package photos used for scanning are transmitted for processing only and are not retained by us.</p>
+   </section>
 
-    <h2>4. Data Storage and Security</h2>
-    <p>All data is stored on your device using the standard Android local storage (SharedPreferences). You can delete all app data at any time by clearing app data or uninstalling the app from your device settings.</p>
+   <section class="sec" id="s05">
+    <div class="sec-n">05</div>
+    <h2 data-i18n="privacy.caredose.sec_camera_photo">Camera &amp; Photo Library Permission</h2>
+    <p>CareDose requests access to your camera and photo library exclusively for the <strong>package scan</strong> feature — to identify a medication from a photo of its packaging. Access is only requested when you tap the scan option, and photos are only sent to our server for that specific request.</p>
+   </section>
 
-    <h2>5. Notifications Permission</h2>
+   <section class="sec" id="s06">
+    <div class="sec-n">06</div>
+    <h2 data-i18n="privacy.caredose.sec_notifications">Notifications Permission</h2>
     <p>CareDose requests permission to send local notifications in order to deliver medication reminders. Notifications are generated entirely on-device and do not involve any external servers or services.</p>
+   </section>
 
-    <h2>6. Children's Privacy</h2>
+   <section class="sec" id="s07">
+    <div class="sec-n">07</div>
+    <h2 data-i18n="privacy.sec.childrens_privacy">Children's Privacy</h2>
     <p>CareDose is not directed at children under 13. We do not knowingly collect data from children.</p>
+   </section>
 
-    <h2>7. Your Rights</h2>
-    <p>You can delete all app data at any time by uninstalling the app or clearing app data in your device settings. Since all data is stored locally, uninstalling the app permanently removes all your information.</p>
+   <section class="sec" id="s08">
+    <div class="sec-n">08</div>
+    <h2 data-i18n="privacy.sec.your_rights">Your Rights</h2>
+    <p>You can delete all app data at any time by uninstalling the app or clearing app data in your device settings. Since all medication and profile data is stored locally, uninstalling the app permanently removes all your information. Package photos and interaction-check requests are not retained by us, so there is nothing further to delete on our side.</p>
+   </section>
 
-    <h2>8. Changes to This Policy</h2>
+   <section class="sec" id="s09">
+    <div class="sec-n">09</div>
+    <h2 data-i18n="privacy.sec.changes">Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. Changes will be reflected on this page with an updated date.</p>
+   </section>
 
-    <h2>9. Contact</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us at:<br>
-    <a href="mailto:sokyralabs@gmail.com">sokyralabs@gmail.com</a></p>
+   <section class="sec" id="s10">
+    <div class="sec-n">10</div>
+    <h2 data-i18n="privacy.sec.contact">Contact</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+    <a class="mailbig" href="mailto:sokyralabs@gmail.com">sokyralabs@gmail.com <span aria-hidden="true">↗</span></a>
+   </section>
   </div>
+ </div>
+</section>
 
-  <footer>
-    <a href="index.html">sokyra-labs.github.io</a> · © 2025 Sokyra Labs
-  </footer>
-
+</main>
+<div class="legal-foot mono-s"><a href="index.html">sokyra-labs.github.io</a><span>· © 2026 Sokyra Labs</span></div>
+<script src="assets/i18n/en.js"></script>
+<script src="assets/i18n/ru.js"></script>
+<script src="assets/i18n/ua.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/sokyra.js"></script>
 </body>
 </html>

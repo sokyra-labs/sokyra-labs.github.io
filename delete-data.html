@@ -1,128 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Delete Your Data — Kapva</title>
-  <link rel="icon" href="images/favicon.png" type="image/png" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --cream: #F5F0E4;
-      --navy:  #1B2A55;
-      --gold:  #C9A84C;
-      --muted: #5A6480;
-    }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--cream);
-      color: var(--navy);
-      line-height: 1.7;
-    }
-    header {
-      background: var(--navy);
-      padding: 5px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    header a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 14px; }
-    header a:hover { color: var(--gold); }
-    header img.logo { height: 65px; filter: brightness(0) invert(1); }
-    @media (max-width: 600px) {
-      header { padding: 5px 20px; justify-content: center; }
-      header img.logo { height: 70px; }
-      header .back { display: none; }
-    }
-    .content {
-      max-width: 680px;
-      margin: 60px auto;
-      padding: 0 24px 80px;
-    }
-    h1 { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
-    .subtitle { color: var(--muted); font-size: 0.95rem; margin-bottom: 40px; }
-    h2 { font-size: 1.1rem; font-weight: 700; margin: 32px 0 12px; }
-    p { color: var(--muted); margin-bottom: 12px; }
-    ol { color: var(--muted); padding-left: 22px; margin-bottom: 20px; }
-    ol li { margin-bottom: 8px; }
-    .email-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--navy);
-      color: #fff;
-      text-decoration: none;
-      padding: 13px 24px;
-      border-radius: 12px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      margin-top: 8px;
-    }
-    .email-btn:hover { background: #263a6e; }
-    .note {
-      background: #fff;
-      border-left: 3px solid var(--gold);
-      padding: 14px 18px;
-      border-radius: 0 10px 10px 0;
-      margin: 24px 0;
-      color: var(--muted);
-      font-size: 0.92rem;
-    }
-    footer {
-      background: #12203F;
-      color: rgba(255,255,255,0.5);
-      text-align: center;
-      padding: 24px;
-      font-size: 0.85rem;
-    }
-    footer a { color: var(--gold); text-decoration: none; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Delete Your Data — Kapva — Sokyra Labs</title>
+<link rel="icon" href="images/kapva-icon.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/sokyra.css">
 </head>
-<body>
+<body class="locked">
+<div id="pre"><div class="pre-in"><img class="pre-mark" src="images/sokyra-mark.png" alt="Sokyra Labs"><div class="pre-word">Sokyra&nbsp;Labs</div><div class="pre-num">000 %</div><div class="pre-bar"><i></i></div></div></div>
+<div class="mesh"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="vignette"></div>
+<div class="grain"></div>
+<div class="wipe"></div>
+<div class="cur"></div><div class="cur-r"></div>
+<div id="prog"></div>
 
-  <header>
-    <a href="index.html"><img class="logo" src="images/sokyra-logo.png" alt="Sokyra Labs" /></a>
-    <a class="back" href="kapva.html">← Back to Kapva</a>
-  </header>
+<nav class="nav">
+<a class="brand mag" href="index.html"><img src="images/sokyra-mark.png" alt=""><span>Sokyra&nbsp;Labs</span></a>
+<div class="nav-r">
+<div class="lang-switch" role="group" aria-label="Language">
+ <button type="button" data-lang="en">EN</button>
+ <button type="button" data-lang="ru">RU</button>
+ <button type="button" data-lang="ua">UA</button>
+</div>
+<a class="pill mag" href="kapva.html"><span aria-hidden="true">←</span> <span data-i18n="privacy.back_to">Back to</span> Kapva</a>
+</div>
+</nav>
 
-  <div class="content">
-    <h1>Delete Your Data</h1>
-    <p class="subtitle">Kapva — AI Finance Tracker · Sokyra Labs</p>
+<main id="view">
 
-    <p>All your financial data (accounts, transactions, categories, debts, and goals) is stored <strong>locally on your device</strong> and is never uploaded to our servers. You are in full control of your data at all times.</p>
+<section class="phero" style="--c:#2bd9c0" data-screen-label="Delete data hero">
+ <div class="phero-glow"></div>
+ <a class="pill mag rv" style="align-self:flex-start;margin-bottom:26px" href="kapva.html"><span aria-hidden="true">←</span> <span data-i18n="privacy.back_to">Back to</span> Kapva</a>
+ <div class="phero-app rv"><img src="images/kapva-icon.png" alt=""><div><b>Kapva</b><span data-i18n="privacy.delete.subtitle">AI Finance Tracker</span></div></div>
+ <h1 class="phero-title rv" data-i18n="privacy.delete.title">Delete Your Data</h1>
+ <div class="stamp rv"><i></i>Sokyra Labs</div>
+ <p class="lede rv"><span data-i18n="privacy.delete.lede_p1">All your financial data (accounts, transactions, categories, debts, and goals) is stored </span><strong data-i18n="privacy.delete.lede_strong">locally on your device</strong><span data-i18n="privacy.delete.lede_p2"> and is never uploaded to our servers. You are in full control of your data at all times.</span></p>
+</section>
 
-    <h2>Option 1 — Delete data directly from the app</h2>
+<section class="legal" style="--c:#2bd9c0">
+ <div class="legal-wrap" style="grid-template-columns:1fr;max-width:680px">
+  <div>
+   <section class="sec" id="s01">
+    <div class="sec-n">01</div>
+    <h2 data-i18n="privacy.delete.sec1">Option 1 — Delete data directly from the app</h2>
     <ol>
-      <li>Open <strong>Kapva</strong> on your device</li>
-      <li>Go to <strong>Settings → Data</strong></li>
-      <li>Individual items can be deleted from their respective screens (accounts, transactions, etc.)</li>
+     <li>Open <strong>Kapva</strong> on your device</li>
+     <li>Go to <strong>Settings → Data</strong></li>
+     <li>Individual items can be deleted from their respective screens (accounts, transactions, etc.)</li>
     </ol>
+   </section>
 
-    <h2>Option 2 — Clear all app data (Android)</h2>
+   <section class="sec" id="s02">
+    <div class="sec-n">02</div>
+    <h2 data-i18n="privacy.delete.sec2">Option 2 — Clear all app data (Android)</h2>
     <ol>
-      <li>Open your device <strong>Settings</strong></li>
-      <li>Go to <strong>Apps → Kapva</strong></li>
-      <li>Tap <strong>Storage → Clear Data</strong></li>
+     <li>Open your device <strong>Settings</strong></li>
+     <li>Go to <strong>Apps → Kapva</strong></li>
+     <li>Tap <strong>Storage → Clear Data</strong></li>
     </ol>
     <p>This permanently removes all app data from your device.</p>
+   </section>
 
-    <h2>Option 3 — Uninstall the app</h2>
+   <section class="sec" id="s03">
+    <div class="sec-n">03</div>
+    <h2 data-i18n="privacy.delete.sec3">Option 3 — Uninstall the app</h2>
     <p>Uninstalling Kapva removes all locally stored data from your device.</p>
+    <p class="note">Since all data is stored locally, there is no account or server-side data to delete. The steps above are sufficient to remove all your data completely.</p>
+   </section>
 
-    <div class="note">
-      Since all data is stored locally, there is no account or server-side data to delete. The steps above are sufficient to remove all your data completely.
-    </div>
-
-    <h2>Contact us</h2>
+   <section class="sec" id="s04">
+    <div class="sec-n">04</div>
+    <h2 data-i18n="privacy.delete.sec4">Contact us</h2>
     <p>If you have any questions or need assistance with data deletion, contact us:</p>
-    <a class="email-btn" href="mailto:sokyralabs@gmail.com">
-      sokyralabs@gmail.com
-    </a>
+    <a class="mailbig" href="mailto:sokyralabs@gmail.com">sokyralabs@gmail.com <span aria-hidden="true">↗</span></a>
+   </section>
   </div>
+ </div>
+</section>
 
-  <footer>
-    <a href="index.html">sokyra-labs.github.io</a> · © 2025 Sokyra Labs
-  </footer>
-
+</main>
+<div class="legal-foot mono-s"><a href="index.html">sokyra-labs.github.io</a><span>· © 2026 Sokyra Labs</span></div>
+<script src="assets/i18n/en.js"></script>
+<script src="assets/i18n/ru.js"></script>
+<script src="assets/i18n/ua.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/sokyra.js"></script>
 </body>
 </html>

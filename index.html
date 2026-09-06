@@ -1,484 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sokyra Labs — Smart Mobile Apps</title>
-  <link rel="icon" href="images/favicon.png" type="image/png" />
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --cream:  #F5F0E4;
-      --navy:   #1B2A55;
-      --gold:   #C9A84C;
-      --gold-light: #E2C06A;
-      --text:   #1B2A55;
-      --muted:  #5A6480;
-      --card-bg: #FFFFFF;
-      --shadow: 0 4px 24px rgba(27, 42, 85, 0.10);
-    }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    /* ── HEADER ── */
-    header {
-      background: var(--navy);
-      padding: 5px 40px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    header .logo {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      text-decoration: none;
-    }
-
-    header .logo img {
-      height: 65px;
-      filter: brightness(0) invert(1);
-    }
-
-    header nav a {
-      color: rgba(255,255,255,0.75);
-      text-decoration: none;
-      margin-left: 28px;
-      font-size: 14px;
-      transition: color 0.2s;
-    }
-
-    header nav a:hover { color: var(--gold-light); }
-
-    /* ── HERO ── */
-    .hero {
-      text-align: center;
-      padding: 0 0 40px;
-    }
-
-    .hero .hero-banner {
-      max-width: 100%;
-      width: 100%;
-      margin: 0 auto;
-      display: block;
-    }
-
-    .hero .content {
-      max-width: 832px;
-      margin: -70px auto 0;
-      background: #fff;
-      padding: 40px 36px;
-      border-radius: 20px;
-      box-shadow: 0 8px 40px rgba(27, 42, 85, 0.18);
-      z-index: 100;
-      position: relative;
-    }
-
-    .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.2;
-      margin: 0 auto 16px;
-    }
-
-    .hero h1 span { color: var(--gold); }
-
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--muted);
-      max-width: 480px;
-      margin: 0 auto;
-    }
-
-    /* ── APPS SECTION ── */
-    .apps {
-      padding: 20px 24px 80px;
-      max-width: 880px;
-      margin: 0 auto;
-    }
-
-    .apps h2 {
-      text-align: center;
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 40px;
-      letter-spacing: 0.5px;
-    }
-
-    .apps-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
-    }
-
-    .app-card {
-      background: var(--card-bg);
-      border-radius: 20px;
-      padding: 32px 28px;
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .app-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 36px rgba(27, 42, 85, 0.15);
-    }
-
-    .app-card .app-header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 16px;
-    }
-
-    .app-card .app-icon {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      object-fit: cover;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
-    }
-
-    .app-card .app-name {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--navy);
-    }
-
-    .app-card .app-tagline {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    .app-card .app-desc {
-      font-size: 0.95rem;
-      color: var(--muted);
-      flex: 1;
-      margin-bottom: 24px;
-    }
-
-    .app-card .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-
-    .app-card .tag {
-      background: var(--cream);
-      color: var(--navy);
-      font-size: 0.75rem;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 20px;
-    }
-
-    .btn-play {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      background: var(--navy);
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 20px;
-      border-radius: 12px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      transition: background 0.2s;
-    }
-
-    .btn-play:hover { background: #263a6e; }
-
-    .btn-play svg { flex-shrink: 0; }
-
-    .btn-play.coming-soon {
-      background: #C8C2B0;
-      cursor: default;
-      pointer-events: none;
-    }
-
-    /* ── ABOUT ── */
-    .about {
-      background: var(--navy);
-      color: #fff;
-      text-align: center;
-      padding: 70px 24px;
-    }
-
-    .about h2 {
-      font-size: 1.8rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-    }
-
-    .about h2 span { color: var(--gold); }
-
-    .about p {
-      font-size: 1rem;
-      color: rgba(255,255,255,0.70);
-      max-width: 520px;
-      margin: 0 auto;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #12203F;
-      color: rgba(255,255,255,0.55);
-      text-align: center;
-      padding: 32px 24px;
-      font-size: 0.85rem;
-    }
-
-    footer a {
-      color: var(--gold-light);
-      text-decoration: none;
-    }
-
-    footer a:hover { text-decoration: underline; }
-
-    footer .footer-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-bottom: 16px;
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 600px) {
-      header { padding: 5px 20px; justify-content: center; }
-      header .logo img { height: 70px; filter: brightness(0) invert(1); }
-      header nav { display: none; }
-      .hero { padding: 0 0 28px; }
-      .hero .content {
-        margin: -40px 16px 0;
-        padding: 24px 20px;
-        border-radius: 16px;
-      }
-      .hero h1 { font-size: 1.7rem; }
-      .apps { padding: 10px 16px 60px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title data-i18n="meta.title">Sokyra Labs — независимая мобильная студия</title>
+<meta name="description" data-i18n-attr="content:meta.description" content="Sokyra Labs делает функциональные и удобные Android-продукты на базе AI — для питания, финансов, кино и повседневных привычек.">
+<link rel="icon" href="images/favicon.png" type="image/png" />
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Space+Grotesk:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/sokyra.css">
 </head>
-<body>
+<body class="locked">
+<div id="pre"><div class="pre-in"><img class="pre-mark" src="images/sokyra-mark.png" alt="Sokyra Labs"><div class="pre-word">Sokyra&nbsp;Labs</div><div class="pre-num">000 %</div><div class="pre-bar"><i></i></div></div></div>
+<div class="mesh"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+<div class="vignette"></div>
+<div class="grain"></div>
+<div class="wipe"></div>
+<div class="cur"></div><div class="cur-r"></div>
+<div id="prog"></div>
 
-  <header>
-    <a href="/" class="logo">
-      <img src="images/sokyra-logo.png" alt="Sokyra Labs" />
-    </a>
-    <nav>
-      <a href="#apps">Apps</a>
-      <a href="mailto:sokyralabs@gmail.com">Contact</a>
-    </nav>
-  </header>
+<nav class="nav">
+<a class="brand mag" href="index.html"><img src="images/sokyra-mark.png" alt=""><span>Sokyra&nbsp;Labs</span></a>
+<div class="nav-r">
+<div class="lang-switch" role="group" aria-label="Language">
+ <button type="button" data-lang="en">EN</button>
+ <button type="button" data-lang="ru">RU</button>
+ <button type="button" data-lang="ua">UA</button>
+</div>
+<a class="pill mag" href="#work" data-i18n="nav.products">Продукты</a>
+<a class="pill mag" href="mailto:sokyralabs@gmail.com" data-i18n="nav.contact">Контакт</a>
+</div>
+</nav>
 
-  <section class="hero">
-    <img class="hero-banner" src="images/hero-banner.png" alt="Sokyra Labs" />
-    <div class="content">
-      <h1>Smart apps<br>powered by <span>AI</span></h1>
-      <p>We build focused mobile tools that help people eat better, spend smarter, and live more intentionally.</p>
+<main id="view">
+
+<section class="hero" data-screen-label="Hero">
+ <div class="orbit" aria-hidden="true">
+  <div class="orbit-plane">
+   <div class="orbit-i"><img src="images/ignis-icon.jpg" alt=""></div>
+   <div class="orbit-i"><img src="images/apertura-logo.png" alt=""></div>
+   <div class="orbit-i"><img src="images/vice_atlas_icon.png" alt=""></div>
+   <div class="orbit-i"><img src="images/kapva-icon.png" alt=""></div>
+  </div>
+ </div>
+ <div class="hero-top">
+  <div class="eyebrow rv" data-i18n="hero.eyebrow">Независимая мобильная студия · с 2025</div>
+  <h1 class="h-xl hero-title">
+   <span class="w"><i data-i18n="hero.title_line1">Приложения</i></span><br>
+   <span class="w"><i><em data-i18n="hero.title_line2">со своим</em></i></span><br>
+   <span class="w"><i data-i18n="hero.title_line3">умом</i></span>
+  </h1>
+ </div>
+ <div class="hero-bot">
+  <div style="display:flex;flex-direction:column;gap:20px">
+   <p class="lede rv" data-i18n="hero.lede">Sokyra Labs — независимая студия мобильных приложений. Функциональные Android-продукты на основе AI — для питания, финансов, развлечений и повседневных привычек. Без тёмных паттернов и подписочных ловушек: только то, чем мы готовы пользоваться сами.</p>
+   <div class="hero-cta rv"><a class="pill solid mag" href="#work"><span data-i18n="hero.cta_products">Смотреть продукты</span> <span aria-hidden="true">↓</span></a><a class="pill mag" href="mailto:sokyralabs@gmail.com" data-i18n="hero.cta_contact">Написать нам</a></div>
+  </div>
+  <div class="hero-meta rv">
+   <div><b>04</b><span data-i18n="hero.meta_products_label">Продуктов</span></div>
+   <div><b>03</b><span data-i18n="hero.meta_play_label">В Google Play</span></div>
+   <div><b>00</b><span data-i18n="hero.meta_dark_label">Тёмных паттернов</span></div>
+   <div><b>100%</b><span data-i18n="hero.meta_outsource_label">Без аутсорса</span></div>
+  </div>
+ </div>
+ <div class="scroll-hint"><span class="mono-s" data-i18n="hero.scroll">Вниз</span><i></i></div>
+</section>
+
+<div class="ticker"><div class="tick-row">
+<span data-i18n="ticker.ai">На основе AI</span><span data-i18n="ticker.privacy">Приватность прежде всего</span><span data-i18n="ticker.darkpatterns">Без тёмных паттернов</span><span data-i18n="ticker.handmade">Дизайн и код — своими руками</span><span data-i18n="ticker.android">Android</span><span data-i18n="ticker.products">Наши продукты</span><span data-i18n="ticker.ai">На основе AI</span><span data-i18n="ticker.privacy">Приватность прежде всего</span><span data-i18n="ticker.darkpatterns">Без тёмных паттернов</span><span data-i18n="ticker.handmade">Дизайн и код — своими руками</span><span data-i18n="ticker.android">Android</span><span data-i18n="ticker.products">Наши продукты</span>
+</div></div>
+
+<section class="slabs" id="work">
+ <div style="padding:70px var(--pad) 26px">
+  <div class="eyebrow rv" data-i18n="slabs.eyebrow">Продукты</div>
+  <h2 class="h-lg" style="margin:14px 0 14px"><span class="w"><i data-i18n="slabs.heading_line1">Множество приложений.</i></span><br><span class="w"><i data-i18n="slabs.heading_line2">Один принцип.</i></span></h2>
+  <p class="lede rv" data-i18n="slabs.lede">В каждом — много возможностей, и ни одной лишней кнопки.</p>
+ </div>
+
+ <!-- 01 Ignis -->
+ <article class="slab" style="--c:#ff6b2c" data-screen-label="Ignis">
+  <div class="slab-glow"></div>
+  <div class="slab-inner">
+   <div class="slab-copy">
+    <div class="slab-idx rv">01 / 04</div>
+    <div class="slab-head rv"><img class="slab-icon" src="images/ignis-icon.jpg" alt="Ignis"><div><h3 class="slab-name">Ignis</h3><div class="slab-tag" data-i18n="apps.ignis.tag">AI-трекер калорий и фитнеса</div></div></div>
+    <p class="slab-desc rv" data-i18n="apps.ignis.desc">Дневник питания со сканером штрихкодов, тренировки с историей подходов и AI-тренер, который отвечает на вопросы о еде и застрявшем весе — по вашим же данным.</p>
+    <div class="chips rv"><span class="chip" data-i18n="apps.ignis.chip1">Питание</span><span class="chip" data-i18n="apps.ignis.chip2">Тренировки</span><span class="chip" data-i18n="apps.ignis.chip3">AI-тренер</span><span class="chip" data-i18n="apps.ignis.chip4">Android</span></div>
+    <div class="slab-cta rv">
+     <a class="pill solid mag" href="https://play.google.com/store/apps/details?id=com.apps.ignis" target="_blank" rel="noopener"><svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true"><path d="M1 1l8.5 5L1 11z" fill="currentColor"/></svg><span data-i18n="ui.google_play">Google Play</span></a>
+     <a class="pill mag" href="ignis.html"><span data-i18n="ui.learn_more">Подробнее</span> <span aria-hidden="true">→</span></a>
     </div>
-  </section>
+   </div>
+   <div class="slab-shots rv">
+    <div class="shot tilt" data-d="0"><img src="images/ignis/dashboard.png" alt="Ignis — главный экран" loading="lazy"></div>
+    <div class="shot tilt" data-d="1"><img src="images/ignis/nutrition.png" alt="Ignis — дневник питания" loading="lazy"></div>
+   </div>
+  </div>
+ </article>
 
-  <section class="apps" id="apps">
-    <h2>Our Apps</h2>
-    <div class="apps-grid">
-
-      <!-- Ignis -->
-      <div class="app-card">
-        <div class="app-header">
-          <img class="app-icon" src="images/ignis-icon.jpg" alt="Ignis" />
-          <div>
-            <div class="app-name">Ignis</div>
-            <div class="app-tagline">AI Calorie Tracker</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Track nutrition with AI photo recognition. Log meals by photo, get instant calorie and macro breakdown, and stay on top of your health goals.
-        </p>
-        <div class="tags">
-          <span class="tag">Nutrition</span>
-          <span class="tag">AI</span>
-          <span class="tag">Health</span>
-        </div>
-        <div style="display:flex; gap:10px;">
-          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.apps.ignis" target="_blank" style="flex:1;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1-.97 1.45-.5l14 8.5a.5.5 0 010 .99l-14 8.5C3.97 21.47 3 21.33 3 20.5z"/></svg>
-            Google Play
-          </a>
-          <a class="btn-play" href="ignis.html" style="flex:0 0 auto; background:transparent; border:1.5px solid var(--navy); color:var(--navy);">Learn more</a>
-        </div>
-      </div>
-
-      <!-- Kapva -->
-      <div class="app-card">
-        <div class="app-header">
-          <img class="app-icon" src="images/kapva-icon.png" alt="Kapva" />
-          <div>
-            <div class="app-name">Kapva</div>
-            <div class="app-tagline">AI Finance Tracker</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Track income and expenses, get daily AI financial insights, and stay in control of your money — all aligned to your actual pay cycle.
-        </p>
-        <div class="tags">
-          <span class="tag">Finance</span>
-          <span class="tag">AI</span>
-          <span class="tag">Budget</span>
-        </div>
-        <div style="display:flex; gap:10px;">
-          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.apps.kapva" target="_blank" style="flex:1;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1-.97 1.45-.5l14 8.5a.5.5 0 010 .99l-14 8.5C3.97 21.47 3 21.33 3 20.5z"/></svg>
-            Google Play
-          </a>
-          <a class="btn-play" href="kapva.html" style="flex:0 0 auto; background:transparent; border:1.5px solid var(--navy); color:var(--navy);">Learn more</a>
-        </div>
-      </div>
-
-      <!-- Apertura -->
-      <div class="app-card">
-        <div class="app-header">
-          <img class="app-icon" src="images/apertura-logo.png" alt="Apertura" />
-          <div>
-            <div class="app-name">Apertura</div>
-            <div class="app-tagline">Movie & Series Tracker</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Track what you watch, discover new titles by genre, and let Shuffle surprise you with your next pick from your watchlist.
-        </p>
-        <div class="tags">
-          <span class="tag">Movies</span>
-          <span class="tag">Series</span>
-          <span class="tag">Watchlist</span>
-        </div>
-        <div style="display:flex; gap:10px;">
-          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.apps.apertura" target="_blank" style="flex:1;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1-.97 1.45-.5l14 8.5a.5.5 0 010 .99l-14 8.5C3.97 21.47 3 21.33 3 20.5z"/></svg>
-            Google Play
-          </a>
-          <a class="btn-play" href="apertura.html" style="flex:0 0 auto; background:transparent; border:1.5px solid var(--navy); color:var(--navy);">Learn more</a>
-        </div>
-      </div>
-
-      <!-- Vice Atlas -->
-      <div class="app-card">
-        <div class="app-header">
-          <img class="app-icon" src="images/vice_atlas_icon.png" alt="Vice Atlas" />
-          <div>
-            <div class="app-name">Vice Atlas</div>
-            <div class="app-tagline">GTA VI News & Tracker</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          AI-curated GTA VI news, release countdown, Vice City map, wallpapers, and trailers — everything in one place for the wait.
-        </p>
-        <div class="tags">
-          <span class="tag">Gaming</span>
-          <span class="tag">GTA VI</span>
-          <span class="tag">News</span>
-        </div>
-        <div style="display:flex; gap:10px;">
-          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.apps.viceatlas" target="_blank" style="flex:1;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1-.97 1.45-.5l14 8.5a.5.5 0 010 .99l-14 8.5C3.97 21.47 3 21.33 3 20.5z"/></svg>
-            Google Play
-          </a>
-          <a class="btn-play" href="vice-atlas.html" style="flex:0 0 auto; background:transparent; border:1.5px solid var(--navy); color:var(--navy);">Learn more</a>
-        </div>
-      </div>
-
-      <!-- Weekloom -->
-      <div class="app-card">
-        <div class="app-header">
-          <img class="app-icon" src="images/weekloop_icon.jpg" alt="Weekloom" style="border-radius:16px;" />
-          <div>
-            <div class="app-name">Weekloom</div>
-            <div class="app-tagline">Life in Weeks</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Visualise your life as a grid of weeks. Rate each one, add notes, and find patterns in how you actually spend your time.
-        </p>
-        <div class="tags">
-          <span class="tag">Lifestyle</span>
-          <span class="tag">Mindfulness</span>
-          <span class="tag">Tracker</span>
-        </div>
-        <div style="display:flex; gap:10px;">
-          <a class="btn-play" href="https://play.google.com/store/apps/details?id=com.apps.weekloom" target="_blank" style="flex:1;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1-.97 1.45-.5l14 8.5a.5.5 0 010 .99l-14 8.5C3.97 21.47 3 21.33 3 20.5z"/></svg>
-            Google Play
-          </a>
-          <a class="btn-play" href="weekloom.html" style="flex:0 0 auto; background:transparent; border:1.5px solid var(--navy); color:var(--navy);">Learn more</a>
-        </div>
-      </div>
-
-      <!-- Nymera -->
-      <div class="app-card">
-        <div class="app-header">
-          <img class="app-icon" src="images/nymera-icon.png" alt="Nymera" />
-          <div>
-            <div class="app-name">Nymera</div>
-            <div class="app-tagline">Lucid Dreaming Guide</div>
-          </div>
-        </div>
-        <p class="app-desc">
-          Train reality checks, master 6 proven techniques, and keep a dream journal — your complete lucid dreaming toolkit in one focused app.
-        </p>
-        <div class="tags">
-          <span class="tag">Sleep</span>
-          <span class="tag">Mindfulness</span>
-          <span class="tag">Journal</span>
-        </div>
-        <div style="display:flex; gap:10px;">
-          <a class="btn-play coming-soon" style="flex:1;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M3 20.5v-17c0-.83 1-.97 1.45-.5l14 8.5a.5.5 0 010 .99l-14 8.5C3.97 21.47 3 21.33 3 20.5z"/></svg>
-            Coming Soon
-          </a>
-          <a class="btn-play" href="nymera.html" style="flex:0 0 auto; background:transparent; border:1.5px solid var(--navy); color:var(--navy);">Learn more</a>
-        </div>
-      </div>
-
+ <!-- 02 Apertura -->
+ <article class="slab" style="--c:#00cfff" data-screen-label="Apertura">
+  <div class="slab-glow"></div>
+  <div class="slab-inner">
+   <div class="slab-copy">
+    <div class="slab-idx rv">02 / 04</div>
+    <div class="slab-head rv"><img class="slab-icon" src="images/apertura-logo.png" alt="Apertura"><div><h3 class="slab-name">Apertura</h3><div class="slab-tag" data-i18n="apps.apertura.tag">Трекер фильмов и сериалов</div></div></div>
+    <p class="slab-desc rv" data-i18n="apps.apertura.desc">Хочу посмотреть, смотрю, посмотрено — в одном месте. Когда выбор затянулся, Shuffle предлагает случайный тайтл из общей подборки и заканчивает спор.</p>
+    <div class="chips rv"><span class="chip" data-i18n="apps.apertura.chip1">Кино</span><span class="chip" data-i18n="apps.apertura.chip2">Watchlist</span><span class="chip" data-i18n="apps.apertura.chip3">Shuffle</span><span class="chip" data-i18n="apps.apertura.chip4">Android</span></div>
+    <div class="slab-cta rv">
+     <a class="pill solid mag" href="https://play.google.com/store/apps/details?id=com.apps.apertura" target="_blank" rel="noopener"><svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true"><path d="M1 1l8.5 5L1 11z" fill="currentColor"/></svg><span data-i18n="ui.google_play">Google Play</span></a>
+     <a class="pill mag" href="apertura.html"><span data-i18n="ui.learn_more">Подробнее</span> <span aria-hidden="true">→</span></a>
     </div>
-  </section>
+   </div>
+   <div class="slab-shots rv">
+    <div class="shot tilt" data-d="0"><img src="images/apertura/home.png" alt="Apertura — ежедневная лента" loading="lazy"></div>
+    <div class="shot tilt" data-d="1"><img src="images/apertura/shuffle.png" alt="Apertura — Shuffle" loading="lazy"></div>
+   </div>
+  </div>
+ </article>
 
-  <section class="about">
-    <h2>Built with <span>care</span></h2>
-    <p>Every app we ship is focused on one thing done right. No subscriptions traps, no dark patterns — just tools that work for you.</p>
-  </section>
-
-  <footer>
-    <div class="footer-links">
-      <a href="ignis.html">Ignis</a>
-      <a href="kapva.html">Kapva</a>
-      <a href="apertura.html">Apertura</a>
-      <a href="vice-atlas.html">Vice Atlas</a>
-      <a href="weekloom.html">Weekloom</a>
-      <a href="nymera.html">Nymera</a>
-      <a href="privacy-ignis.html">Privacy — Ignis</a>
-      <a href="privacy-kapva.html">Privacy — Kapva</a>
-      <a href="privacy-apertura.html">Privacy — Apertura</a>
-      <a href="privacy-vice-atlas.html">Privacy — Vice Atlas</a>
-      <a href="privacy-weekloom.html">Privacy — Weekloom</a>
-      <a href="privacy-nymera.html">Privacy — Nymera</a>
-      <a href="mailto:sokyralabs@gmail.com">sokyralabs@gmail.com</a>
+ <!-- 03 Vice Atlas -->
+ <article class="slab" style="--c:#ff3d81" data-screen-label="Vice Atlas">
+  <div class="slab-glow"></div>
+  <div class="slab-inner">
+   <div class="slab-copy">
+    <div class="slab-idx rv">03 / 04</div>
+    <div class="slab-head rv"><img class="slab-icon" src="images/vice_atlas_icon.png" alt="Vice Atlas"><div><h3 class="slab-name">Vice Atlas</h3><div class="slab-tag" data-i18n="apps.vice_atlas.tag">Компаньон для GTA VI</div></div></div>
+    <p class="slab-desc rv" data-i18n="apps.vice_atlas.desc">Обратный отсчёт до релиза, AI-выжимка из утечек и слухов, ежедневные квизы и коллекция карточек — всё, чем живёт ожидание GTA VI, в одном приложении.</p>
+    <div class="chips rv"><span class="chip" data-i18n="apps.vice_atlas.chip1">Игры</span><span class="chip" data-i18n="apps.vice_atlas.chip2">GTA VI</span><span class="chip" data-i18n="apps.vice_atlas.chip3">Новости</span><span class="chip" data-i18n="apps.vice_atlas.chip4">Android</span></div>
+    <div class="slab-cta rv">
+     <a class="pill solid mag" href="https://play.google.com/store/apps/details?id=com.apps.viceatlas" target="_blank" rel="noopener"><svg width="11" height="12" viewBox="0 0 11 12" aria-hidden="true"><path d="M1 1l8.5 5L1 11z" fill="currentColor"/></svg><span data-i18n="ui.google_play">Google Play</span></a>
+     <a class="pill mag" href="vice-atlas.html"><span data-i18n="ui.learn_more">Подробнее</span> <span aria-hidden="true">→</span></a>
     </div>
-    <div>© 2025 Sokyra Labs. All rights reserved.</div>
-  </footer>
+   </div>
+   <div class="slab-shots rv">
+    <div class="shot tilt" data-d="0"><img src="images/vice_atlas/homepage.png" alt="Vice Atlas — главный экран" loading="lazy"></div>
+    <div class="shot tilt" data-d="1"><img src="images/vice_atlas/daily.png" alt="Vice Atlas — Daily Hub" loading="lazy"></div>
+   </div>
+  </div>
+ </article>
 
+ <!-- 04 Kapva -->
+ <article class="slab soon" style="--c:#2bd9c0" data-screen-label="Kapva">
+  <div class="slab-glow"></div>
+  <div class="slab-inner">
+   <div class="slab-copy">
+    <div class="slab-idx rv">04 / 04</div>
+    <div class="slab-head rv"><img class="slab-icon" src="images/kapva-icon.png" alt="Kapva"><div><h3 class="slab-name">Kapva</h3><div class="slab-tag" data-i18n="apps.kapva.tag">AI-трекер финансов</div></div></div>
+    <div class="soon-tag rv"><i></i><span data-i18n="ui.in_development">В разработке</span></div>
+    <p class="slab-desc rv" data-i18n="apps.kapva.desc">Все счета — в одном балансе, все траты — под ежедневным AI-разбором. Kapva Kids учит детей обращаться с карманными деньгами и своими целями.</p>
+    <div class="chips rv"><span class="chip" data-i18n="apps.kapva.chip1">Финансы</span><span class="chip" data-i18n="apps.kapva.chip2">AI-аналитика</span><span class="chip" data-i18n="apps.kapva.chip3">Kapva Kids</span><span class="chip" data-i18n="apps.kapva.chip4">Android</span></div>
+    <div class="slab-cta rv">
+     <a class="pill mag" href="kapva.html"><span data-i18n="ui.learn_more">Подробнее</span> <span aria-hidden="true">→</span></a>
+    </div>
+   </div>
+   <div class="slab-shots rv">
+    <div class="shot tilt" data-d="0"><img src="images/kapva/dashboard.png" alt="Kapva — дашборд" loading="lazy"></div>
+    <div class="shot tilt" data-d="1"><img src="images/kapva/kids-dashboard.png" alt="Kapva Kids" loading="lazy"></div>
+   </div>
+  </div>
+ </article>
+
+ <!--
+ Скрыто до приближения к релизу. Раскомментировать по мере готовности.
+
+ <article class="slab soon" style="--c:#9b6bff" data-screen-label="Weekloom">
+  <div class="slab-glow"></div>
+  <div class="slab-inner">
+   <div class="slab-copy">
+    <div class="slab-idx rv">05 / 07</div>
+    <div class="slab-head rv"><img class="slab-icon" src="images/weekloop_icon.jpg" alt="Weekloom"><div><h3 class="slab-name">Weekloom</h3><div class="slab-tag">Жизнь по неделям</div></div></div>
+    <div class="soon-tag rv"><i></i>В разработке</div>
+    <p class="slab-desc rv">Вся жизнь — сеткой недель: прожитые, текущая и те, что впереди. Оценка, заметки и статистика показывают, на что на самом деле уходит время.</p>
+    <div class="chips rv"><span class="chip">Лайфстайл</span><span class="chip">Осознанность</span><span class="chip">Трекер</span><span class="chip">Android</span></div>
+    <div class="slab-cta rv">
+     <a class="pill mag" href="weekloom.html">Подробнее <span aria-hidden="true">→</span></a>
+    </div>
+   </div>
+   <div class="slab-shots rv">
+    <div class="shot tilt" data-d="0"><img src="images/weekloom/net.jpg" alt="Weekloom — сетка жизни" loading="lazy"></div>
+    <div class="shot tilt" data-d="1"><img src="images/weekloom/year.jpg" alt="Weekloom — год" loading="lazy"></div>
+   </div>
+  </div>
+ </article>
+
+ <article class="slab soon" style="--c:#6e92f5" data-screen-label="Nymera">
+  <div class="slab-glow"></div>
+  <div class="slab-inner">
+   <div class="slab-copy">
+    <div class="slab-idx rv">06 / 07</div>
+    <div class="slab-head rv"><img class="slab-icon" src="images/nymera-icon.png" alt="Nymera"><div><h3 class="slab-name">Nymera</h3><div class="slab-tag">Гид по осознанным снам</div></div></div>
+    <div class="soon-tag rv"><i></i>В разработке</div>
+    <p class="slab-desc rv">Проверки реальности, шесть проверенных техник и дневник снов — весь инструментарий для осознанных сновидений в одном сфокусированном приложении.</p>
+    <div class="chips rv"><span class="chip">Сон</span><span class="chip">Осознанность</span><span class="chip">Дневник</span><span class="chip">Android</span></div>
+    <div class="slab-cta rv">
+     <a class="pill mag" href="nymera.html">Подробнее <span aria-hidden="true">→</span></a>
+    </div>
+   </div>
+   <div class="slab-shots rv">
+    <div class="shot tilt" data-d="0"><img src="images/nymera/screen3.png" alt="Nymera — техники" loading="lazy"></div>
+    <div class="shot tilt" data-d="1"><img src="images/nymera/screen4.png" alt="Nymera — дневник снов" loading="lazy"></div>
+   </div>
+  </div>
+ </article>
+
+ <article class="slab soon" style="--c:#4a9de0" data-screen-label="CareDose">
+  <div class="slab-glow"></div>
+  <div class="slab-inner">
+   <div class="slab-copy">
+    <div class="slab-idx rv">07 / 07</div>
+    <div class="slab-head rv"><img class="slab-icon" src="images/caredose-icon.jpg" alt="CareDose"><div><h3 class="slab-name">CareDose</h3><div class="slab-tag">Трекер приёма лекарств</div></div></div>
+    <div class="soon-tag rv"><i></i>В разработке</div>
+    <p class="slab-desc rv">Расписание приёма, история доз и статистика по дням — с локальными напоминаниями и профилями для всей семьи. Всё хранится только на устройстве.</p>
+    <div class="chips rv"><span class="chip">Здоровье</span><span class="chip">AI-сканер</span><span class="chip">Приватность</span><span class="chip">Android</span></div>
+    <div class="slab-cta rv">
+     <a class="pill mag" href="caredose.html">Подробнее <span aria-hidden="true">→</span></a>
+    </div>
+   </div>
+   <div class="slab-shots rv">
+    <div class="shot tilt" data-d="0"><img src="images/caredose/today.jpg" alt="CareDose — сегодня" loading="lazy"></div>
+    <div class="shot tilt" data-d="1"><img src="images/caredose/medications.jpg" alt="CareDose — мои лекарства" loading="lazy"></div>
+   </div>
+  </div>
+ </article>
+ -->
+
+</section>
+
+<section class="paper" data-screen-label="Manifesto">
+ <div class="eyebrow rv" data-i18n="manifesto.eyebrow">Как мы работаем</div>
+ <h2 class="h-lg" style="margin:14px 0 16px"><span class="w"><i data-i18n="manifesto.heading_line1">Функциональное —</i></span><br><span class="w"><i data-i18n="manifesto.heading_line2">удобным.</i></span></h2>
+ <p class="lede rv" data-i18n="manifesto.lede">Три принципа, по которым мы добавляем функции — и делаем их понятными.</p>
+ <div class="prin">
+  <div class="prin-item rv"><b>01</b><div><h3 data-i18n="manifesto.p1_title">Функции, а не балласт</h3><p data-i18n="manifesto.p1_desc">Мы не боимся насыщенных приложений — но каждая функция должна быть понятна с первого касания. Сложное внутри, простое снаружи.</p></div></div>
+  <div class="prin-item rv"><b>02</b><div><h3 data-i18n="manifesto.p2_title">AI там, где он нужен</h3><p data-i18n="manifesto.p2_desc">Распознавание фото, ежедневный инсайт, тренер, который отвечает. Никогда — чат-бот, прикрученный ради описания в сторе.</p></div></div>
+  <div class="prin-item rv"><b>03</b><div><h3 data-i18n="manifesto.p3_title">Никаких ловушек</h3><p data-i18n="manifesto.p3_desc">Никаких препятствий при отмене, фальшивой срочности и продажи данных. Приложение работает на вас — или не заслуживает установки.</p></div></div>
+ </div>
+ <div class="counters rv">
+  <div class="cnt"><b data-count="04">0</b><span data-i18n="manifesto.counter_products_label">Продуктов в портфеле</span></div>
+  <div class="cnt"><b data-count="03">0</b><span data-i18n="manifesto.counter_play_label">Уже в Google Play</span></div>
+  <div class="cnt"><b data-count="00">0</b><span data-i18n="manifesto.counter_dark_label">Тёмных паттернов</span></div>
+  <div class="cnt"><b data-count="100%">0</b><span data-i18n="manifesto.counter_outsource_label">Без аутсорса</span></div>
+ </div>
+</section>
+
+<footer class="foot" data-screen-label="Footer">
+ <h2 class="foot-big"><span class="w"><i data-i18n="footer.big_line1">Делаем</i></span><br><span class="w"><i data-i18n="footer.big_line2">функциональное</i></span><br><span class="w"><i data-i18n="footer.big_line3">удобным.</i></span></h2>
+ <a class="foot-mail mag" href="mailto:sokyralabs@gmail.com">sokyralabs@gmail.com <span aria-hidden="true">↗</span></a>
+ <div class="foot-cols">
+  <div class="foot-col"><h4 data-i18n="footer.col_products">Продукты</h4><ul>
+   <li><a href="ignis.html">Ignis</a></li>
+   <li><a href="apertura.html">Apertura</a></li>
+   <li><a href="vice-atlas.html">Vice Atlas</a></li>
+   <li><a href="kapva.html">Kapva</a></li>
+   <!-- <li><a href="weekloom.html">Weekloom</a></li>
+   <li><a href="nymera.html">Nymera</a></li>
+   <li><a href="caredose.html">CareDose</a></li> -->
+  </ul></div>
+  <div class="foot-col"><h4 data-i18n="footer.col_privacy">Приватность</h4><ul>
+   <li><a href="privacy-ignis.html">Ignis</a></li>
+   <li><a href="privacy-apertura.html">Apertura</a></li>
+   <li><a href="privacy-vice-atlas.html">Vice Atlas</a></li>
+   <li><a href="privacy-kapva.html">Kapva</a></li>
+   <!-- <li><a href="privacy-weekloom.html">Weekloom</a></li>
+   <li><a href="privacy-nymera.html">Nymera</a></li>
+   <li><a href="privacy-caredose.html">CareDose</a></li> -->
+  </ul></div>
+  <div class="foot-col"><h4 data-i18n="footer.col_studio">Студия</h4><ul>
+   <li><a href="index.html#work" data-i18n="footer.col_products">Продукты</a></li>
+   <li><a href="mailto:sokyralabs@gmail.com" data-i18n="footer.link_contact">Контакт</a></li>
+  </ul></div>
+  <div class="foot-col"><h4 data-i18n="footer.col_play">Play</h4><ul>
+   <li><a href="https://play.google.com/store/apps/details?id=com.apps.ignis" target="_blank" rel="noopener">Ignis ↗</a></li>
+   <li><a href="https://play.google.com/store/apps/details?id=com.apps.apertura" target="_blank" rel="noopener">Apertura ↗</a></li>
+   <li><a href="https://play.google.com/store/apps/details?id=com.apps.viceatlas" target="_blank" rel="noopener">Vice Atlas ↗</a></li>
+  </ul></div>
+ </div>
+ <div class="foot-end"><span class="mono-s" data-i18n="footer.copyright">© 2026 Sokyra Labs. Все права защищены.</span><span class="mono-s" data-i18n="footer.credit">Дизайн и разработка — внутри студии</span></div>
+</footer>
+
+</main>
+<script src="assets/i18n/en.js"></script>
+<script src="assets/i18n/ru.js"></script>
+<script src="assets/i18n/ua.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/sokyra.js"></script>
 </body>
 </html>
