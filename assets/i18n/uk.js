@@ -1,5 +1,5 @@
 window.SOKYRA_I18N = window.SOKYRA_I18N || {};
-window.SOKYRA_I18N.ua = {
+window.SOKYRA_I18N.uk = {
   "meta.title": "Sokyra Labs — незалежна мобільна студія",
   "meta.description": "Sokyra Labs створює функціональні та зручні Android-додатки на основі AI — для харчування, фінансів, розваг і повсякденних звичок.",
 

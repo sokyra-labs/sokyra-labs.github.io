@@ -38,7 +38,7 @@ function tilt(){
 function orbit(){
  const stage=$('.orbit');if(!stage)return;
  const icons=$$('.orbit-i',stage);if(!icons.length)return;
- if(!matchMedia('(min-width:960px)').matches)return;
+ const mq=matchMedia('(min-width:960px)');
  const period=18000,minScale=.5,maxScale=1,minOp=.16,maxOp=.95;
  let radius=Math.min(stage.clientWidth,stage.clientHeight)/2*.74,radiusY=Math.min(radius*.32,170);
  addEventListener('resize',()=>{radius=Math.min(stage.clientWidth,stage.clientHeight)/2*.74;radiusY=Math.min(radius*.32,170)});
@@ -49,16 +49,27 @@ function orbit(){
   el.style.opacity=String(minOp+(maxOp-minOp)*v);
   el.style.zIndex=String(Math.round(v*10));
  }
+ function clearInline(){
+  icons.forEach(el=>{el.style.transform='';el.style.opacity='';el.style.zIndex=''});
+ }
  if(reduce){
-  icons.forEach((el,i)=>place((i/icons.length)*Math.PI*2,el));
+  if(mq.matches)icons.forEach((el,i)=>place((i/icons.length)*Math.PI*2,el));
   return;
  }
+ let running=false;
  const start=performance.now();
- (function frame(now){
+ function frame(now){
+  if(!mq.matches){running=false;return;}
   const t=((now-start)%period)/period;
   icons.forEach((el,i)=>place(t*Math.PI*2+(i/icons.length)*Math.PI*2,el));
   requestAnimationFrame(frame);
- })(start);
+ }
+ function ensureRunning(){
+  if(mq.matches&&!running){running=true;requestAnimationFrame(frame);}
+  else if(!mq.matches){clearInline();}
+ }
+ mq.addEventListener?mq.addEventListener('change',ensureRunning):mq.addListener(ensureRunning);
+ ensureRunning();
 }
 
 /* ── parallax + progress + sticky nav ── */
