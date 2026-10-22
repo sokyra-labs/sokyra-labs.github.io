@@ -130,7 +130,7 @@ window.SOKYRA_I18N.ja = {
   "apps.vice_atlas.feat4_desc": "50種類のユニークなGTAカード、シリーズ10年の歴史のタイムライン、そしてコインと交換できるビジュアルテーマ。",
 
   "apps.kapva.meta_title": "Kapva — Sokyra Labs",
-  "apps.kapva.meta_description": "Kapva — 毎日のインサイトとKapva Kidsモードを備えたAI家計トラッカー。現在クローズドテスト中です。",
+  "apps.kapva.meta_description": "Kapva — 毎日のインサイトとKapva Kidsモードを備えたAI家計トラッカー。",
   "apps.kapva.feat1_title": "毎日のまとめ",
   "apps.kapva.feat1_desc": "毎日届く短いAIインサイト：お金がどこに使われたか、明日変えるべきこと。",
   "apps.kapva.feat2_title": "すべての口座を一つの残高に",
@@ -139,7 +139,6 @@ window.SOKYRA_I18N.ja = {
   "apps.kapva.feat3_desc": "支出の円グラフ、トレンド、各カテゴリの割合を — 表計算ソフトなしで。",
   "apps.kapva.feat4_title": "Kapva Kids",
   "apps.kapva.feat4_desc": "子供専用のモード：お小遣い、貯蓄目標、良い習慣へのバッジ。",
-  "apps.kapva.testing_note": "現在クローズドテスト中 — Google Playでの公開は2〜3週間後を予定しています。",
 
   "privacy.back_to": "戻る：",
   "privacy.title": "プライバシーポリシー",

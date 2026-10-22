@@ -130,7 +130,7 @@ window.SOKYRA_I18N.da = {
   "apps.vice_atlas.feat4_desc": "50 unikke GTA-kort, en tiårig tidslinje over seriens historie, og visuelle temaer for mønter.",
 
   "apps.kapva.meta_title": "Kapva — Sokyra Labs",
-  "apps.kapva.meta_description": "Kapva — en AI-økonomitracker med daglig indsigt og en Kapva Kids-tilstand. I øjeblikket i lukket test.",
+  "apps.kapva.meta_description": "Kapva — en AI-økonomitracker med daglig indsigt og en Kapva Kids-tilstand.",
   "apps.kapva.feat1_title": "Et dagligt overblik",
   "apps.kapva.feat1_desc": "En kort AI-indsigt hver dag: hvor dine penge gik hen, og hvad der er værd at ændre i morgen.",
   "apps.kapva.feat2_title": "Hver konto, én saldo",
@@ -139,7 +139,6 @@ window.SOKYRA_I18N.da = {
   "apps.kapva.feat3_desc": "Lagkagediagrammer over forbrug, tendenser og hver kategoris andel — uden regneark.",
   "apps.kapva.feat4_title": "Kapva Kids",
   "apps.kapva.feat4_desc": "En separat tilstand til børn: lommepenge, opsparingsmål og badges for gode vaner.",
-  "apps.kapva.testing_note": "I øjeblikket i lukket test — lancering på Google Play forventes om 2–3 uger.",
 
   "privacy.back_to": "Tilbage til",
   "privacy.title": "Privatlivspolitik",

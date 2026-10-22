@@ -130,7 +130,7 @@ window.SOKYRA_I18N.nl = {
   "apps.vice_atlas.feat4_desc": "50 unieke GTA-kaarten, een tienjarige tijdlijn van de geschiedenis van de reeks, en visuele thema's voor munten.",
 
   "apps.kapva.meta_title": "Kapva — Sokyra Labs",
-  "apps.kapva.meta_description": "Kapva — een AI-financiëntracker met dagelijkse inzichten en een Kapva Kids-modus. Momenteel in gesloten test.",
+  "apps.kapva.meta_description": "Kapva — een AI-financiëntracker met dagelijkse inzichten en een Kapva Kids-modus.",
   "apps.kapva.feat1_title": "Een dagelijks overzicht",
   "apps.kapva.feat1_desc": "Elke dag een kort AI-inzicht: waar je geld naartoe ging en wat morgen de moeite waard is om te veranderen.",
   "apps.kapva.feat2_title": "Elke rekening, één saldo",
@@ -139,7 +139,6 @@ window.SOKYRA_I18N.nl = {
   "apps.kapva.feat3_desc": "Taartdiagrammen van uitgaven, trends en het aandeel van elke categorie — zonder spreadsheets.",
   "apps.kapva.feat4_title": "Kapva Kids",
   "apps.kapva.feat4_desc": "Een aparte modus voor kinderen: zakgeld, spaardoelen en badges voor goede gewoontes.",
-  "apps.kapva.testing_note": "Momenteel in gesloten test — lancering op Google Play verwacht binnen 2–3 weken.",
 
   "privacy.back_to": "Terug naar",
   "privacy.title": "Privacybeleid",

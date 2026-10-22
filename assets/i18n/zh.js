@@ -130,7 +130,7 @@ window.SOKYRA_I18N.zh = {
   "apps.vice_atlas.feat4_desc": "50 张独特的 GTA 卡牌、系列十年历史的时间线，以及用代币兑换的视觉主题。",
 
   "apps.kapva.meta_title": "Kapva — Sokyra Labs",
-  "apps.kapva.meta_description": "Kapva —— 带每日洞察和 Kapva Kids 模式的 AI 财务追踪应用。目前处于封闭测试阶段。",
+  "apps.kapva.meta_description": "Kapva —— 带每日洞察和 Kapva Kids 模式的 AI 财务追踪应用。",
   "apps.kapva.feat1_title": "每日总览",
   "apps.kapva.feat1_desc": "每天一条简短的 AI 洞察：你的钱花在了哪里，明天值得做出什么改变。",
   "apps.kapva.feat2_title": "所有账户，一个余额",
@@ -139,7 +139,6 @@ window.SOKYRA_I18N.zh = {
   "apps.kapva.feat3_desc": "支出饼图、趋势和每个类别的占比——无需使用表格。",
   "apps.kapva.feat4_title": "Kapva Kids",
   "apps.kapva.feat4_desc": "专为儿童设计的独立模式：零花钱、储蓄目标，以及养成好习惯的徽章。",
-  "apps.kapva.testing_note": "目前处于封闭测试阶段——预计 2 到 3 周内在 Google Play 上线。",
 
   "privacy.back_to": "返回",
   "privacy.title": "隐私政策",

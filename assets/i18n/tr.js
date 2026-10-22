@@ -130,7 +130,7 @@ window.SOKYRA_I18N.tr = {
   "apps.vice_atlas.feat4_desc": "50 benzersiz GTA kartı, serinin on yıllık tarihinin zaman çizelgesi ve jeton karşılığında görsel temalar.",
 
   "apps.kapva.meta_title": "Kapva — Sokyra Labs",
-  "apps.kapva.meta_description": "Kapva — günlük analizler ve Kapva Kids modu ile yapay zeka destekli finans takibi. Şu anda kapalı test aşamasında.",
+  "apps.kapva.meta_description": "Kapva — günlük analizler ve Kapva Kids modu ile yapay zeka destekli finans takibi.",
   "apps.kapva.feat1_title": "Günlük bir özet",
   "apps.kapva.feat1_desc": "Her gün kısa bir yapay zeka içgörüsü: paranızın nereye gittiği ve yarın değiştirmeye değer olan.",
   "apps.kapva.feat2_title": "Her hesap, tek bir bakiye",
@@ -139,7 +139,6 @@ window.SOKYRA_I18N.tr = {
   "apps.kapva.feat3_desc": "Harcama pasta grafikleri, eğilimler ve her kategorinin payı — tablolar olmadan.",
   "apps.kapva.feat4_title": "Kapva Kids",
   "apps.kapva.feat4_desc": "Çocuklar için ayrı bir mod: harçlık, birikim hedefleri ve iyi alışkanlıklar için rozetler.",
-  "apps.kapva.testing_note": "Şu anda kapalı test aşamasında — Google Play'de lansmanın 2–3 hafta içinde olması bekleniyor.",
 
   "privacy.back_to": "Şuraya dön:",
   "privacy.title": "Gizlilik Politikası",

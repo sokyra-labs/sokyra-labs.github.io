@@ -130,7 +130,7 @@ window.SOKYRA_I18N.fi = {
   "apps.vice_atlas.feat4_desc": "50 ainutlaatuista GTA-korttia, sarjan kymmenen vuoden historian aikajana, ja visuaalisia teemoja kolikoita vastaan.",
 
   "apps.kapva.meta_title": "Kapva — Sokyra Labs",
-  "apps.kapva.meta_description": "Kapva — tekoälyn talousseuranta päivittäisillä oivalluksilla ja Kapva Kids -tilalla. Tällä hetkellä suljetussa testauksessa.",
+  "apps.kapva.meta_description": "Kapva — tekoälyn talousseuranta päivittäisillä oivalluksilla ja Kapva Kids -tilalla.",
   "apps.kapva.feat1_title": "Päivittäinen yhteenveto",
   "apps.kapva.feat1_desc": "Lyhyt tekoälyoivallus joka päivä: mihin rahasi menivät ja mitä kannattaa muuttaa huomenna.",
   "apps.kapva.feat2_title": "Jokainen tili, yksi saldo",
@@ -139,7 +139,6 @@ window.SOKYRA_I18N.fi = {
   "apps.kapva.feat3_desc": "Kulutuksen ympyrädiagrammit, trendit ja jokaisen kategorian osuus — ilman taulukkolaskentaa.",
   "apps.kapva.feat4_title": "Kapva Kids",
   "apps.kapva.feat4_desc": "Erillinen tila lapsille: taskuraha, säästötavoitteet ja merkkejä hyvistä tavoista.",
-  "apps.kapva.testing_note": "Tällä hetkellä suljetussa testauksessa — julkaisu Google Playssa odotetaan 2–3 viikon kuluttua.",
 
   "privacy.back_to": "Takaisin",
   "privacy.title": "Tietosuojakäytäntö",

@@ -130,7 +130,7 @@ window.SOKYRA_I18N.ar = {
   "apps.vice_atlas.feat4_desc": "50 بطاقة GTA فريدة، خط زمني لعشر سنوات من تاريخ السلسلة، وسمات مرئية مقابل العملات.",
 
   "apps.kapva.meta_title": "Kapva — Sokyra Labs",
-  "apps.kapva.meta_description": "Kapva — متتبع مالي بالذكاء الاصطناعي مع تحليلات يومية ووضع Kapva Kids. حاليًا في اختبار مغلق.",
+  "apps.kapva.meta_description": "Kapva — متتبع مالي بالذكاء الاصطناعي مع تحليلات يومية ووضع Kapva Kids.",
   "apps.kapva.feat1_title": "ملخص يومي",
   "apps.kapva.feat1_desc": "رؤية قصيرة بالذكاء الاصطناعي كل يوم: إلى أين ذهبت أموالك وما يستحق تغييره غدًا.",
   "apps.kapva.feat2_title": "كل حساب، رصيد واحد",
@@ -139,7 +139,6 @@ window.SOKYRA_I18N.ar = {
   "apps.kapva.feat3_desc": "مخططات دائرية للإنفاق، اتجاهات وحصة كل فئة — دون جداول بيانات.",
   "apps.kapva.feat4_title": "Kapva Kids",
   "apps.kapva.feat4_desc": "وضع منفصل للأطفال: مصروف، أهداف ادخار، وشارات مقابل العادات الجيدة.",
-  "apps.kapva.testing_note": "حاليًا في اختبار مغلق — يُتوقع الإطلاق على Google Play خلال أسبوعين إلى ثلاثة أسابيع.",
 
   "privacy.back_to": "العودة إلى",
   "privacy.title": "سياسة الخصوصية",

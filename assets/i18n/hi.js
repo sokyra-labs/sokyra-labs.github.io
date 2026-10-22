@@ -130,7 +130,7 @@ window.SOKYRA_I18N.hi = {
   "apps.vice_atlas.feat4_desc": "50 यूनीक GTA कार्ड्स, सीरीज़ के दस साल के इतिहास की टाइमलाइन, और कॉइन्स के बदले विज़ुअल थीम्स।",
 
   "apps.kapva.meta_title": "Kapva — Sokyra Labs",
-  "apps.kapva.meta_description": "Kapva — रोज़ाना इनसाइट्स और Kapva Kids मोड वाला AI फाइनेंस ट्रैकर। फिलहाल क्लोज़्ड टेस्टिंग में है।",
+  "apps.kapva.meta_description": "Kapva — रोज़ाना इनसाइट्स और Kapva Kids मोड वाला AI फाइनेंस ट्रैकर।",
   "apps.kapva.feat1_title": "रोज़ का सारांश",
   "apps.kapva.feat1_desc": "हर दिन एक छोटा AI इनसाइट: आपका पैसा कहाँ गया और कल क्या बदलना फायदेमंद रहेगा।",
   "apps.kapva.feat2_title": "हर खाता, एक बैलेंस",
@@ -139,7 +139,6 @@ window.SOKYRA_I18N.hi = {
   "apps.kapva.feat3_desc": "खर्च के पाई चार्ट, ट्रेंड्स, और हर श्रेणी का हिस्सा — बिना स्प्रेडशीट के।",
   "apps.kapva.feat4_title": "Kapva Kids",
   "apps.kapva.feat4_desc": "बच्चों के लिए एक अलग मोड: जेब खर्च, बचत के लक्ष्य, और अच्छी आदतों के लिए बैज।",
-  "apps.kapva.testing_note": "फिलहाल क्लोज़्ड टेस्टिंग में — Google Play पर लॉन्च 2–3 हफ्तों में होने की उम्मीद है।",
 
   "privacy.back_to": "वापस जाएँ:",
   "privacy.title": "प्राइवेसी पॉलिसी",

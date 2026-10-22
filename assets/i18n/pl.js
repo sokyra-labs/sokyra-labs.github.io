@@ -130,7 +130,7 @@ window.SOKYRA_I18N.pl = {
   "apps.vice_atlas.feat4_desc": "50 unikalnych kart GTA, oś czasu dziesięciu lat historii serii oraz motywy wizualne za monety.",
 
   "apps.kapva.meta_title": "Kapva — Sokyra Labs",
-  "apps.kapva.meta_description": "Kapva — tracker finansów z AI z codziennymi analizami i trybem Kapva Kids. Obecnie w zamkniętych testach.",
+  "apps.kapva.meta_description": "Kapva — tracker finansów z AI z codziennymi analizami i trybem Kapva Kids.",
   "apps.kapva.feat1_title": "Codzienne podsumowanie",
   "apps.kapva.feat1_desc": "Krótka analiza AI każdego dnia: dokąd poszły twoje pieniądze i co warto zmienić jutro.",
   "apps.kapva.feat2_title": "Każde konto, jeden bilans",
@@ -139,7 +139,6 @@ window.SOKYRA_I18N.pl = {
   "apps.kapva.feat3_desc": "Wykresy kołowe wydatków, trendy i udział każdej kategorii — bez arkuszy kalkulacyjnych.",
   "apps.kapva.feat4_title": "Kapva Kids",
   "apps.kapva.feat4_desc": "Osobny tryb dla dzieci: kieszonkowe, cele oszczędnościowe i odznaki za dobre nawyki.",
-  "apps.kapva.testing_note": "Obecnie w zamkniętych testach — premiera w Google Play spodziewana za 2–3 tygodnie.",
 
   "privacy.back_to": "Powrót do",
   "privacy.title": "Polityka prywatności",
