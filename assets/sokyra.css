@@ -250,6 +250,7 @@ body.cur-hot .cur-r{width:64px;height:64px;margin:-32px 0 0 -32px;border-color:#
 .phero-glow{position:absolute;top:-46%;right:-24%;width:96%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--c),transparent 62%);opacity:.2;filter:blur(60px);pointer-events:none}
 .phero-app{display:flex;align-items:center;gap:12px;margin-bottom:26px}
 .phero-app img{width:52px;height:52px;border-radius:14px;object-fit:cover;box-shadow:0 14px 34px rgba(0,0,0,.55),0 0 0 1px rgba(255,255,255,.07)}
+.phero-app img.mark{width:auto;border-radius:0;object-fit:contain;box-shadow:none;filter:drop-shadow(0 0 18px rgba(201,167,107,.4))}
 .phero-app b{font-family:var(--disp);font-weight:700;font-size:24px;letter-spacing:-.02em;display:block;line-height:1.1}
 .phero-app span{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--c)}
 .phero-title{--ratio:8.2;font-family:var(--disp);font-weight:800;font-size:min(clamp(40px,12vw,104px),calc((100vw - 2*var(--pad))/var(--ratio)));line-height:.88;letter-spacing:-.04em;margin-bottom:20px}
