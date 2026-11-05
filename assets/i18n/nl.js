@@ -86,6 +86,8 @@ window.SOKYRA_I18N.nl = {
   "footer.col_studio": "Studio",
   "footer.col_play": "Play",
   "footer.link_contact": "Contact",
+  "footer.link_terms": "Servicevoorwaarden",
+  "terms.title": "Servicevoorwaarden",
   "footer.copyright": "© 2026 Sokyra Labs. Alle rechten voorbehouden.",
   "footer.credit": "Ontworpen en ontwikkeld in eigen huis",
 

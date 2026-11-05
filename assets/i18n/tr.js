@@ -86,6 +86,8 @@ window.SOKYRA_I18N.tr = {
   "footer.col_studio": "Stüdyo",
   "footer.col_play": "Play",
   "footer.link_contact": "İletişim",
+  "footer.link_terms": "Hizmet Şartları",
+  "terms.title": "Hizmet Şartları",
   "footer.copyright": "© 2026 Sokyra Labs. Tüm hakları saklıdır.",
   "footer.credit": "Tasarım ve geliştirme — kendi ekibimizle",
 

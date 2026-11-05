@@ -86,6 +86,8 @@ window.SOKYRA_I18N.ja = {
   "footer.col_studio": "スタジオ",
   "footer.col_play": "Play",
   "footer.link_contact": "お問い合わせ",
+  "footer.link_terms": "利用規約",
+  "terms.title": "利用規約",
   "footer.copyright": "© 2026 Sokyra Labs. 全著作権所有。",
   "footer.credit": "デザインも開発も自社にて",
 

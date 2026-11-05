@@ -86,6 +86,8 @@ window.SOKYRA_I18N.de = {
   "footer.col_studio": "Studio",
   "footer.col_play": "Play",
   "footer.link_contact": "Kontakt",
+  "footer.link_terms": "Nutzungsbedingungen",
+  "terms.title": "Nutzungsbedingungen",
   "footer.copyright": "© 2026 Sokyra Labs. Alle Rechte vorbehalten.",
   "footer.credit": "Design und Entwicklung — inhouse",
 

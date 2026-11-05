@@ -86,6 +86,8 @@ window.SOKYRA_I18N.zh = {
   "footer.col_studio": "工作室",
   "footer.col_play": "Play",
   "footer.link_contact": "联系我们",
+  "footer.link_terms": "服务条款",
+  "terms.title": "服务条款",
   "footer.copyright": "© 2026 Sokyra Labs。保留所有权利。",
   "footer.credit": "自主设计与开发",
 

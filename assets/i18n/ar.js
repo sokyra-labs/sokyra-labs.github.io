@@ -86,6 +86,8 @@ window.SOKYRA_I18N.ar = {
   "footer.col_studio": "الاستوديو",
   "footer.col_play": "Play",
   "footer.link_contact": "تواصل معنا",
+  "footer.link_terms": "شروط الخدمة",
+  "terms.title": "شروط الخدمة",
   "footer.copyright": "© 2026 Sokyra Labs. جميع الحقوق محفوظة.",
   "footer.credit": "تصميم وتطوير داخلي",
 

@@ -86,6 +86,8 @@ window.SOKYRA_I18N.hi = {
   "footer.col_studio": "स्टूडियो",
   "footer.col_play": "Play",
   "footer.link_contact": "संपर्क करें",
+  "footer.link_terms": "सेवा की शर्तें",
+  "terms.title": "सेवा की शर्तें",
   "footer.copyright": "© 2026 Sokyra Labs. सर्वाधिकार सुरक्षित।",
   "footer.credit": "डिज़ाइन और डेवलपमेंट — इन-हाउस",
 

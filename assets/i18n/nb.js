@@ -86,6 +86,8 @@ window.SOKYRA_I18N.nb = {
   "footer.col_studio": "Studio",
   "footer.col_play": "Play",
   "footer.link_contact": "Kontakt",
+  "footer.link_terms": "Vilkår for bruk",
+  "terms.title": "Vilkår for bruk",
   "footer.copyright": "© 2026 Sokyra Labs. Alle rettigheter forbeholdt.",
   "footer.credit": "Design og utvikling — i egen regi",
 

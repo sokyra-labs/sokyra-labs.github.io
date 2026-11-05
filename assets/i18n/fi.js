@@ -86,6 +86,8 @@ window.SOKYRA_I18N.fi = {
   "footer.col_studio": "Studio",
   "footer.col_play": "Play",
   "footer.link_contact": "Ota yhteyttä",
+  "footer.link_terms": "Käyttöehdot",
+  "terms.title": "Käyttöehdot",
   "footer.copyright": "© 2026 Sokyra Labs. Kaikki oikeudet pidätetään.",
   "footer.credit": "Suunniteltu ja kehitetty itse",
 

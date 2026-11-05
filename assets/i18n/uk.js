@@ -86,6 +86,8 @@ window.SOKYRA_I18N.uk = {
   "footer.col_studio": "Студія",
   "footer.col_play": "Play",
   "footer.link_contact": "Контакти",
+  "footer.link_terms": "Умови використання",
+  "terms.title": "Умови використання",
   "footer.copyright": "© 2026 Sokyra Labs. Усі права захищені.",
   "footer.credit": "Дизайн і розробка — всередині студії",
 

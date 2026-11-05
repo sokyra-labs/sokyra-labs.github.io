@@ -86,6 +86,8 @@ window.SOKYRA_I18N.sv = {
   "footer.col_studio": "Studio",
   "footer.col_play": "Play",
   "footer.link_contact": "Kontakt",
+  "footer.link_terms": "Användarvillkor",
+  "terms.title": "Användarvillkor",
   "footer.copyright": "© 2026 Sokyra Labs. Alla rättigheter förbehållna.",
   "footer.credit": "Design och utveckling — i egen regi",
 
